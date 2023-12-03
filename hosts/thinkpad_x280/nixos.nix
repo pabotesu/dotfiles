@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { 
-  config,
   inputs,
   pkgs,
   hostname,
@@ -77,6 +76,7 @@
    vim
    wget
    git
+   bottom
   ];
   
   # enable ssh
