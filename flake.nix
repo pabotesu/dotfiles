@@ -19,7 +19,7 @@
   
   };
 
-  outputs = inputs:
+  outputs = inputs: 
   { 
     nixosConfigurations = (import ./hosts inputs).nixos;
     homeConfigurations = (import ./hosts inputs).home-manager;
@@ -41,5 +41,6 @@
       devShell = pkgs.mkShell {
         packages = scripts;
       };
-    });
+    })
+  ;
 }
