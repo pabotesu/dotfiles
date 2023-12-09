@@ -15,6 +15,7 @@
       
       ../../modules/nix_config.nix
       ../../modules/i18n.nix
+      ../../modules/networking.nix
     ];
 
   # Bootloader.
