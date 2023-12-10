@@ -1,0 +1,5 @@
+{
+  programs.lemurs = {
+    enable = true;
+  };
+}

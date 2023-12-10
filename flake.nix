@@ -5,7 +5,7 @@
     ### nix ans nix-tools
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    flakes-utils.url = "github:numtide/flake-utils";
+    flake-utils.url = "github:numtide/flake-utils";
     
     ### home-manager
     home-manager = {
@@ -20,15 +20,15 @@
   };
 
   outputs = inputs: 
-  { 
-    nixosConfigurations = (import ./hosts inputs).nixos;
-    homeConfigurations = (import ./hosts inputs).home-manager;
-  }
-  // inputs.flake-utils.lib.eachDefaultSystem (system: let
-     pkgs = import inputs.nixpkgs {
+    { 
+      nixosConfigurations = (import ./hosts inputs).nixos;
+      homeConfigurations = (import ./hosts inputs).home-manager;
+    }
+    // inputs.flake-utils.lib.eachDefaultSystem (system: let
+      pkgs = import inputs.nixpkgs{
        inherit system;
-     };
-     scripts = with pkgs; [
+      };
+      scripts = with pkgs; [
        (writeScriptBin "switch-home" ''
          home-manager switch --flake ".#$@"
        '')
@@ -41,6 +41,5 @@
       devShell = pkgs.mkShell {
         packages = scripts;
       };
-    })
-  ;
+    });
 }
