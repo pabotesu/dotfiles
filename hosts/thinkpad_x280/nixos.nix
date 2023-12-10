@@ -16,8 +16,9 @@
       ../../modules/nix_config.nix
       ../../modules/i18n.nix
       ../../modules/networking.nix
-      ../../modules/dm.nix
       ../../modules/xserver.nix
+      ../../modules/dm.nix 
+      ../../modules/windowserver.nix
     ];
 
   boot = {
