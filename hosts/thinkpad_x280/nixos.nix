@@ -18,7 +18,7 @@
       ../../modules/networking.nix
       ../../modules/xserver.nix
       ../../modules/dm.nix 
-      ../../modules/windowmanager.nix
+      ../../modules/wm.nix
     ];
 
   boot = {
