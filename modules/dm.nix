@@ -1,5 +1,5 @@
 {
-  programs.lemurs = {
-    enable = true;
-  };
+  environment.systemPackages = [
+    pkgs.lemurs
+  ];
 }
