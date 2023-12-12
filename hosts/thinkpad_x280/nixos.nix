@@ -32,12 +32,6 @@
   networking.hostName = hostname;
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure keymap in X11 -> Un use x11
-  # services.xserver = {
-  #  layout = "us";
-  #  xkbVariant = "";
-  #};
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.pabotesu = {
     isNormalUser = true;
@@ -54,11 +48,11 @@
    git
    bottom
   ];
-  
+
   # enable ssh
   services.openssh.enable = true; 
 
   # Did you read the comment?
   system.stateVersion = "23.05";
-
 }
+
