@@ -25,8 +25,8 @@
       homeConfigurations = (import ./hosts inputs).home-manager;
     }
     // inputs.flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = import inputs.nixpkgs{
-       inherit system;
+      pkgs = import inputs.nixpkgs {
+        inherit system;
       };
       scripts = with pkgs; [
        (writeScriptBin "switch-home" ''

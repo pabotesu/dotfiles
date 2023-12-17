@@ -48,7 +48,7 @@ in {
   ### settings nix systems###
   nixos = {
    
-   ### settings nix systems for thinkpad_x280###
+   ### settings nix systems for thinkpad-x280###
    thinkpad-x280 = mkNixOS_System {
       system = "x86_64-linux";
       hostname = "thinkpad-x280";
@@ -63,13 +63,13 @@ in {
   ### settings home-manager ###
   home-manager = {
        
-    ### settings home-manager for pabotesu@thinkpad_x280 ###
-    "pabotesu@thinkpad_x280" = mkHomeManagerConfiguration {
+    ### settings home-manager for pabotesu@thinkpad-x280 ###
+    "pabotesu@thinkpad-x280" = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       username = "pabotesu";
       overlays = [(import inputs.rust-overlay)];
       modules = [
-        ./thinkpad_x280/home-manager.nix
+        ./thinkpad-x280/home-manager.nix
       ];
     };
 
