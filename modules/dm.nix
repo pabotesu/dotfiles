@@ -15,19 +15,17 @@
       };
       defaultSession = "hyprland";
     };
-    services.xserver = {
-      desktopManager = {
-        session = [
-          {
-            manage = "desktop";
-            name = "hyprland";
-            start = ''
-              Hyprland &
-              waitPID=$!
-            '';
-          }
-        ];
-      };
+    desktopManager = {
+      session = [
+        {
+          manage = "desktop";
+          name = "hyprland";
+          start = ''
+            Hyprland &
+            waitPID=$!
+          '';
+        }
+      ];
     };
   };
 }
