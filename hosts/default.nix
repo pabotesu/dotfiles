@@ -26,7 +26,7 @@ inputs: let
       };
       extraSpecialArgs = {
         inherit inputs username;
-        theme = (import ../themes) "tokyonight-moon";
+        #theme = (import ../themes) "tokyonight-moon";
       };
       modules =
         modules
@@ -49,12 +49,12 @@ in {
   nixos = {
    
    ### settings nix systems for thinkpad_x280###
-   thinkpad_x280 = mkNixOS_System {
+   thinkpad-x280 = mkNixOS_System {
       system = "x86_64-linux";
-      hostname = "thinkpad_x280";
+      hostname = "thinkpad-x280";
       username = "pabotesu";
       modules = [
-        ./thinkpad_x280/nixos.nix
+        ./thinkpad-x280/nixos.nix
       ];
     };
 
