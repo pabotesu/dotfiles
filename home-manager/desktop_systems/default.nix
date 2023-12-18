@@ -3,13 +3,13 @@
   ./wofi.nix
   ];
  
-wayland = {
-  enable = true;
-  windowManager.hyprland = {
-    enable = true;
-    xwayland = true;
-    #extraConfig = 
-  };
-}; 
-
-};
+  wayland = {
+    windowManager.hyprland = {
+      enable = true;
+      xwayland = {
+        enable = true;
+      };
+     extraConfig = "./config/hyprland.conf"; 
+    };
+  }; 
+}

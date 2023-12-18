@@ -1,4 +1,7 @@
 {
+  pkgs,
+  ...
+}: {
   services.xserver = {
     displayManager ={
       lightdm = {
@@ -13,19 +16,7 @@
          '';
         };
       };
-      defaultSession = "hyprland";
-    };
-    desktopManager = {
-      session = [
-        {
-          manage = "desktop";
-          name = "hyprland";
-          start = ''
-            Hyprland &
-            waitPID=$!
-          '';
-        }
-      ];
+    autoRepeatDelay = 0;
     };
   };
 }

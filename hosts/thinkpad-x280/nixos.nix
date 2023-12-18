@@ -17,8 +17,9 @@
       ../../modules/i18n.nix
       ../../modules/networking.nix
       ../../modules/xserver.nix
-      ../../modules/dm.nix 
       ../../modules/wm.nix
+      ../../modules/dm.nix
+
     ];
 
   boot = {
