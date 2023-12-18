@@ -11,7 +11,7 @@
       };
     };
   };
-  home.files = {
-  ".config/hypr/hyprland.conf".text = (import ./config/hyprland-config.nix);
+  home.file = {
+    ".config/hypr/hyprland.conf".text = (import ./config/hyprland-config.nix);
   }; 
 }
