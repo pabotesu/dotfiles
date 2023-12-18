@@ -9,7 +9,7 @@
       xwayland = {
         enable = true;
       };
-      extraConfig = ( import ./config/hyprland.nix {
+      extraConfig = (import ./config/hyprland-config.nix{
       	inherit (config);
       });
     };
