@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, config, ...}: {
   imports = [
   ./wofi.nix
   ];
@@ -9,9 +9,9 @@
       xwayland = {
         enable = true;
       };
+    extraConfig = (import ./config/hyprland.config.nix {
+      inherit (config);
+      }); 
     };
   };
-  home.file = {
-    ".config/hypr/hyprland.conf".text = (import ./config/hyprland-config.nix);
-  }; 
 }
