@@ -17,6 +17,5 @@
         };
       };
     };
-    autoRepeatDelay = 0;
   };
 }

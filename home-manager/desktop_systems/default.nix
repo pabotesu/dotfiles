@@ -9,7 +9,9 @@
       xwayland = {
         enable = true;
       };
-     extraConfig = "./config/hyprland.conf"; 
+      extraConfig = (import ./config/hyprland.nix {
+      	inherit (config);
+      });
     };
   }; 
 }
