@@ -1,6 +1,7 @@
 {pkgs, config, ...}: {
   imports = [
   ./wofi.nix
+  ./screen_lock.nix
   ];
  
   wayland = {
@@ -9,9 +10,7 @@
       xwayland = {
         enable = true;
       };
-    extraConfig = (import "./config/hyprland.config.nix" {
-      inherit(config);
-      }); 
+    extraConfig = import ./config/hyprland.config.nix {}; 
     };
   };
 }
