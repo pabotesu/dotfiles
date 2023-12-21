@@ -15,6 +15,8 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 
 # See https://wiki.hyprland.org/Configuring/Monitors/
 #monitor=,preferred,auto,auto
+
+#Thinkpad_x280 monitor 
 monitor= , 1920x1080@60, 0x0, 1
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
@@ -133,7 +135,7 @@ $mainMod = ALT
 $subMod = SUPER
 
 # Screenlock
-bind = $mainMod CTRL, L, exec, swaylock -f
+bind = $mainMod SHIFT, L, exec, swaylock -f
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, Q, exec, kitty

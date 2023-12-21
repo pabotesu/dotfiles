@@ -1,4 +1,3 @@
-{}:
 ''
 # --- Look & Feel --- #
 color=1d1f21
@@ -37,15 +36,15 @@ text-clear-color=c5c8c6
 text-ver-color=c5c8c6
 text-wrong-color=282a2e
 
-# --- function --- #
+# --- effects --- #
 clock
 timestr=%H:%M:%S
 datestr=%a, %b %d
 screenshots
 effect-blur=7x5
 effect-greyscale
-effect-vignette=0.1:0.4
-fade-in=0.5
+effect-vignette=0.3:0.7
+fade-in=0
 ignore-empty-password
 show-failed-attempts
 show-keyboard-layout
