@@ -25,14 +25,14 @@
     border-radius: 5px;
     margin:5px 5px;
   }
-  
+ 
   /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
   #workspaces button:hover {
     background-color: rgba(29, 31, 33, 1);
     border-radius: 5px;
-  }
-  
-  #workspaces button.focused {
+  } 
+ 
+  #workspaces button.active {
     background-color: #8abeb7;
     color: #292433;
     margin:5px 5px;

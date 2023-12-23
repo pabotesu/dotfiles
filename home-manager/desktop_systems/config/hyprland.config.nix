@@ -13,8 +13,6 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 $mainMod = ALT
 $subMod = SUPER
 
-$launcher = ~/rsc_dir/my_wofi.sh
-
 #-----------------------#
 #       monitor         #
 #-----------------------#
@@ -28,6 +26,7 @@ monitor= , 1920x1080@60, 0x0, 1
 
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox
+exec-once = waybar
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
