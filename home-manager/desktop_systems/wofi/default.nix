@@ -6,6 +6,7 @@
 ## app launcher
 home.file.".config/wofi/config".source = ./config/wofi.config;
 home.file.".config/wofi/style.css".source = ./config/css/style.css;
+home.file.".rsc_dir/my_wofi.sh".source = ./script/my_wofi.sh;
 
 ## power menu
 home.file.".config/wofi/powermenu.config".source = ./config/powermenu.config;
