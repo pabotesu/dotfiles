@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-menu=$( echo -e " Poweroff\n󰑓 Reboot\n Lock\n󰗽 Logout" | wofi -i -b -p powermenu --dmenu --line=5 --style=${HOME}/.config/wofi/powermenu.css --conf=${HOME}/.config/wofi/powermenu.conf | awk '{print tolower($2)}' )
+menu=$( echo -e " Poweroff\n󰑓 Reboot\n Lock\n󰗽 Logout" | wofi -i -b -p powermenu --dmenu --line=5 --style=${HOME}/.config/wofi/powermenu.css --conf=${HOME}/.config/wofi/powermenu.config | awk '{print tolower($2)}' )
 
 case $menu in 
         poweroff)
