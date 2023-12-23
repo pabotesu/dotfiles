@@ -1,7 +1,7 @@
 {pkgs, config, ...}: {
   imports = [
-  ./wofi.nix
-  ./screen_lock.nix
+  ./wofi
+  ./screen_lock
   ];
  
   wayland = {
