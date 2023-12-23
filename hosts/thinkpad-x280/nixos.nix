@@ -48,6 +48,7 @@
    wget
    git
    bottom
+   killall
   ];
 
   # enable ssh

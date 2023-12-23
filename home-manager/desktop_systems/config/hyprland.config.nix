@@ -12,9 +12,8 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 #-----------------------#
 $mainMod = ALT
 $subMod = SUPER
-$launcher = $(killall -q wofi || { wofi })
 
-
+$launcher = ~/rsc_dir/my_wofi.sh
 
 #-----------------------#
 #       monitor         #
@@ -136,15 +135,12 @@ device:epic-mouse-v1 {
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
 
-
-$mainMod = ALT
-$subMod = SUPER
-
 # Screenlock
 bind = $mainMod SHIFT, L, exec, swaylock -f
 
 # Start Launcher
-bind = $mainMod, D, exec, $launcher 
+bind = $mainMod, D, exec, ~/.rsc_dir/my_wofi.sh
+bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, Q, exec, kitty

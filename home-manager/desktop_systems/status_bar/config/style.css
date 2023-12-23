@@ -1,0 +1,249 @@
+/* Waybar Stylesheet */
+
+/* General Configuration */
+* {
+    border: none;
+    font-family: PlemolJP Console NF, Roboto Nerd, FiraCode Nerd Font;
+    /*font-weight: bold;*/
+    font-size: 15px;
+  }
+  
+  window#waybar {
+    background-color: rgba(29, 31, 33, 1);
+    color: #c5c8c6;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+  }
+  
+  window#waybar.hidden {
+    opacity: 0.2;
+  }
+  
+  #workspaces button {
+    padding:5px 5px;
+    color: #8abeb7;
+    border-radius: 5px;
+    margin:5px 5px;
+  }
+  
+  /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+  #workspaces button:hover {
+    background-color: rgba(29, 31, 33, 1);
+    border-radius: 5px;
+  }
+  
+  #workspaces button.focused {
+    background-color: #8abeb7;
+    color: #292433;
+    margin:5px 5px;
+    border-radius: 5px;
+  }
+
+  #workspaces button.urgent {
+    background-color: #cc6666;
+    color: #292433;
+    margin:5px 5px;
+    border-radius: 5px;
+  }
+  
+  #mode {
+    background: #8a8299;
+    margin: 4px;
+    border-radius: 0px;
+    color: #292433;
+    /*  border-bottom: 3px solid #d2ced9; */
+  }
+  
+  /* Modules Configuration */
+  
+  /* set default */
+  
+  #clock,
+  #battery,
+  #cpu,
+  #memory,
+  #disk,
+  #temperature,
+  #backlight,
+  #network,
+  #pulseaudio,
+  #custom-media,
+  #custom-pacman,
+  #custom-brightness,
+  #language,
+  #tray,
+  #mode,
+  #idle_inhibitor,
+  #idle_inhibitor.activated,
+  #tray,
+  #mpd {
+    padding: 4px 11px;
+  }
+
+  #clock,
+  #cpu,
+  #temperature,
+  #memory,
+  #disk,
+  #network,
+  #pulseaudio,
+  #custom-pacman,
+  #idle_inhibitor,
+  #idle_inhibitor.activated,
+  #tray,
+  #mpd {
+    margin: 5px 5px;
+  }
+  
+  #window,
+  #workspaces,
+  #custom-media {
+    margin: 0 0px;
+  }
+  
+  .modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+  }
+  
+  /* If workspaces is the rightmost module, omit right margin */
+  .modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+  }
+  
+  #clock {
+    /* background-color: #c5c8c6; */
+    color: #c5c8c6;
+    border-radius: 5px;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 15px;
+  }
+  
+  label:focus {
+    /*  background-color: #000000;*/
+  }
+  
+  #window {
+    padding: 0 25px;
+  }
+  
+  #custom-pacman {
+    border-radius: 5px;
+    margin: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    font-size: 14.5px;
+  }
+  
+  #workspaces {
+    padding: 0 0px;
+  }
+  
+  #cpu {
+    background-color: #cc6666;
+    color: #1d1f21;
+    border-radius: 5px;
+    min-width: 8em;
+    margin-right: 3px;
+    margin-left: 0px;
+  }
+  
+  #temperature {
+    background-color: #de935f;
+    color: #1d1f21;
+    margin-right: 3px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+
+  
+  #memory {
+    background-color: #f0c674;
+    color: #1d1f21;
+    margin-right: 3px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+  
+  #disk {
+    background-color: #b5bd68;
+    color: #1d1f21;
+    margin-right: 3px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+  
+  #network {
+    background-color: #81a2be;
+    color: #1d1f21;
+    margin-right: 3px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+  
+  #network.disconnected {
+    /*  background-color: #d9989c;*/
+  }
+  
+  #pulseaudio {
+    background-color: #b294bb;
+    color: #1d1f21;
+    margin-right: 3px;
+    margin-left: 0px;
+    border-radius: 5px;
+  }
+  
+  #pulseaudio.muted {
+  }
+  
+  #custom-media {
+    padding: 0 15px;
+  }
+  
+  #custom-media.custom-spotify {
+  }
+  
+  #idle_inhibitor {
+    padding: 5px;
+    margin-right: 3px;
+    margin-left: 0px;
+    min-width: 30px;
+    font-size: 17px;
+  }
+  
+  #idle_inhibitor.activated {
+    padding: 5px;
+    margin-right: 3px;
+    margin-left: 0px;
+    min-width: 30px;
+    font-size: 17px;
+  }
+  
+  /*
+  #mpd {
+      background-color: #66cc99;
+      color: #2a5c45;
+  }
+  #mpd.disconnected {
+      background-color: #d9989c;
+  }
+  #mpd.stopped {
+      background-color: #90b1b1;
+  }
+  #mpd.paused {
+      background-color: #51a37a;
+  }
+  */
+  
+  #language {
+    color: #d2ced9;
+    padding: 6 12px;
+    padding-right: 15px;
+    min-width: 20px;
+    font-size: 15px;
+  }
+  
+  #tray {
+    padding-right: 15px;
+    border-radius: 5px;
+  }

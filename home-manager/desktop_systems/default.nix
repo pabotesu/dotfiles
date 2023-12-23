@@ -2,6 +2,7 @@
   imports = [
   ./wofi
   ./screen_lock
+  ./status_bar 
   ];
  
   wayland = {

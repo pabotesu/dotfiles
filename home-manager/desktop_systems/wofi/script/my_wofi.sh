@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-killall -q wofi || {
-  wofi
+pkill wofi || {
+  wofi --style=${HOME}/.config/wofi/style.css
 }
