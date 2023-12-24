@@ -141,6 +141,9 @@ bind = $mainMod SHIFT, L, exec, swaylock -f
 bind = $mainMod, D, exec, ~/.rsc_dir/my_wofi.sh
 bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
 
+# Start Terminal
+bind = $mainMod, ENTER, exec, alacritty
+
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod, Q, exec, kitty
 bind = $mainMod, C, killactive, 
