@@ -142,17 +142,17 @@ bind = $mainMod, D, exec, ~/.rsc_dir/my_wofi.sh
 bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
 
 # Start Terminal
-bind = $mainMod, ENTER, exec, alacritty
+bind = $mainMod, Return,  exec, alacritty
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod, Q, exec, kitty
-bind = $mainMod, C, killactive, 
-bind = $mainMod, M, exit, 
-bind = $mainMod, E, exec, dolphin
-bind = $mainMod, V, togglefloating, 
-bind = $mainMod, R, exec, wofi --show drun
-bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, J, togglesplit, # dwindle
+#bind = $mainMod, Q, exec, alacritty
+bind = $mainMod Shift, Q, killactive, 
+#bind = $mainMod Shift, Q, exit, 
+#bind = $mainMod, E, exec, dolphin
+#bind = $mainMod, V, togglefloating, 
+#bind = $mainMod, R, exec, wofi --show drun
+#bind = $mainMod, P, pseudo, # dwindle
+#bind = $mainMod, J, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, h

@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
-    ./terminal.nix
+    ./terminal
+    ./apps
   ];
 }
