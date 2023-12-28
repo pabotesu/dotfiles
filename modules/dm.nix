@@ -6,7 +6,7 @@
     displayManager ={
       lightdm = {
         greeters.mini = {
-         enable = true;
+         enable = false;
          user = "pabotesu";
          extraConfig = ''
                 [greeter]
@@ -16,6 +16,18 @@
          '';
         };
       };
+      defaultSession = "pabotesu-hyprland";
+    };
+    desktopManager = {
+      session = [
+        {
+          name = "nix-hyprland";
+          start = ''
+            ${pkgs.runtimeShell} Hyprland &
+            waitPID=$!
+          '';
+        }
+      ];
     };
   };
 }

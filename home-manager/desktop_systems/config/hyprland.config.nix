@@ -18,7 +18,8 @@ $subMod = SUPER
 #-----------------------#
 
 #Thinkpad_x280 monitor 
-monitor= , 1920x1080@60, 0x0, 1
+#monitor= , 1920x1080@60, 0x0, 1
+monitor= DP-1, 2560x1440@60, 0x0, 1
 
 
 
