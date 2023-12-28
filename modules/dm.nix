@@ -16,14 +16,15 @@
          '';
         };
       };
-      defaultSession = "pabotesu-hyprland";
+      defaultSession = "pkgs.hyprland";
+monitor= , 1920x1080@60, 0x0, 1
     };
     desktopManager = {
       session = [
         {
           name = "nix-hyprland";
           start = ''
-            ${pkgs.runtimeShell} Hyprland &
+            Hyprland &
             waitPID=$!
           '';
         }
