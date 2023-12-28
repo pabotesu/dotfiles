@@ -58,6 +58,16 @@ in {
       ];
     };
 
+   ### settings nix systems for nix-machine###
+   nix-machine = mkNixOS_System {
+      system = "x86_64-linux";
+      hostname = "nix-machine";
+      username = "pabotesu";
+      modules = [
+        ./nix-machine/nixos.nix
+      ];
+    };
+  
   };
 
   ### settings home-manager ###
@@ -73,6 +83,16 @@ in {
       ];
     };
 
+    ### settings home-manager for pabotesu@nix-machine ###
+    "pabotesu@nix-machine" = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "pabotesu";
+      overlays = [(import inputs.rust-overlay)];
+      modules = [
+        ./nix-machine/home-manager.nix
+      ];
+    };
+  
   };
 
 }
