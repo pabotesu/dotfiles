@@ -20,7 +20,8 @@
       ../../modules/wm.nix
       ../../modules/dm.nix
       ../../modules/fcitx5.nix
-
+      ../../modules/fonts.nix
+      ../../modules/sound.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd

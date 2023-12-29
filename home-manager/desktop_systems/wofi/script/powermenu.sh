@@ -14,7 +14,7 @@ case $menu in
             	env LANG=en.US_UTF-8 swaylock -f
                 ;;
         logout)
-                swaymsg exit
+                hyprctl dispatch exit
                 ;;
 esac
 }

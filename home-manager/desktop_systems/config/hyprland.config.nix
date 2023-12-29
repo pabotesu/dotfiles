@@ -10,21 +10,24 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 #-----------------------#
 #       variables       #
 #-----------------------#
+
 $mainMod = ALT
 $subMod = SUPER
 
 #-----------------------#
 #       monitor         #
 #-----------------------#
+
 # ---- Thinkpad_x280 monitor ---- # 
-# monitor= , 1920x1080@60, 0x0, 1
+# monitor= , 1920x1080@60, 0x0, 1 #
+
 # ---- My Destop Machine Env ---- #
 monitor= DP-1, 2560x1440@60, 0x0, 1
 
-# See https://wiki.hyprland.org/Configuring/Keywords/ for more
+#-----------------------#
+#       exec-tools      #
+#-----------------------#
 
-# Execute your favorite apps at launch
-# exec-once = waybar & hyprpaper & firefox
 exec-once = waybar
 exec-once = fcitx5
 
@@ -132,6 +135,10 @@ device:epic-mouse-v1 {
 # See https://wiki.hyprland.org/Configuring/Window-Rules/ for more
 
 
+#-----------------------#
+#       key-binds       #
+#-----------------------#
+
 # Screenlock
 bind = $mainMod SHIFT, L, exec, swaylock -f
 
@@ -141,6 +148,9 @@ bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
 
 # Start Terminal
 bind = $mainMod, Return,  exec, alacritty
+
+# Full Screen Window
+bind = $mainMod, F, fullscreen
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 #bind = $mainMod, Q, exec, alacritty
@@ -153,10 +163,16 @@ bind = $mainMod Shift, Q, killactive,
 #bind = $mainMod, J, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
-bind = $mainMod, left, movefocus, h
-bind = $mainMod, right, movefocus, l
-bind = $mainMod, up, movefocus, k
-bind = $mainMod, down, movefocus, j
+bind = $mainMod, left, movefocus, l
+bind = $mainMod, right, movefocus,r
+bind = $mainMod, up, movefocus, u
+bind = $mainMod, down, movefocus, d
+
+# Move focus with mainMod + arrow keys
+bind = $mainMod SHIFT, left, movewindow, l
+bind = $mainMod SHIFT, right, movewindow,r
+bind = $mainMod SHIFT, up, movewindow, u
+bind = $mainMod SHIFT, down, movewindow, d
 
 # Switch workspaces with mainMod + [0-9]
 bind = $mainMod, 1, workspace, 1
@@ -171,16 +187,16 @@ bind = $mainMod, 9, workspace, 9
 bind = $mainMod, 0, workspace, 10
 
 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-bind = $mainMod, 1, movetoworkspace, 1
-bind = $mainMod, 2, movetoworkspace, 2
-bind = $mainMod, 3, movetoworkspace, 3
-bind = $mainMod, 4, movetoworkspace, 4
-bind = $mainMod, 5, movetoworkspace, 5
-bind = $mainMod, 6, movetoworkspace, 6
-bind = $mainMod, 7, movetoworkspace, 7
-bind = $mainMod, 8, movetoworkspace, 8
-bind = $mainMod, 9, movetoworkspace, 9
-bind = $mainMod, 0, movetoworkspace, 10
+bind = $mainMod SHIFT, 1, movetoworkspace, 1
+bind = $mainMod SHIFT, 2, movetoworkspace, 2
+bind = $mainMod SHIFT, 3, movetoworkspace, 3
+bind = $mainMod SHIFT, 4, movetoworkspace, 4
+bind = $mainMod SHIFT, 5, movetoworkspace, 5
+bind = $mainMod SHIFT, 6, movetoworkspace, 6
+bind = $mainMod SHIFT, 7, movetoworkspace, 7
+bind = $mainMod SHIFT, 8, movetoworkspace, 8
+bind = $mainMod SHIFT, 9, movetoworkspace, 9
+bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
 # Example special workspace (scratchpad)
 bind = $mainMod, S, togglespecialworkspace, magic
