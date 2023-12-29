@@ -16,26 +16,23 @@ $subMod = SUPER
 #-----------------------#
 #       monitor         #
 #-----------------------#
-
-#Thinkpad_x280 monitor 
-#monitor= , 1920x1080@60, 0x0, 1
+# ---- Thinkpad_x280 monitor ---- # 
+# monitor= , 1920x1080@60, 0x0, 1
+# ---- My Destop Machine Env ---- #
 monitor= DP-1, 2560x1440@60, 0x0, 1
-
-
 
 # See https://wiki.hyprland.org/Configuring/Keywords/ for more
 
 # Execute your favorite apps at launch
 # exec-once = waybar & hyprpaper & firefox
 exec-once = waybar
+exec-once = fcitx5
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
 
 # Some default env vars.
 env = XCURSOR_SIZE,24
-
-
 
 # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 input {
