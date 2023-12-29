@@ -1,0 +1,33 @@
+{
+  pkgs,
+  ...
+}: {
+  services.xserver = {
+    displayManager = {
+      lightdm = {
+        greeters.mini = {
+          enable = false;
+          user = "pabotesu";
+          extraConfig =''
+            [greeter]
+            show-password-label = true
+            [greeter-theme]
+            #background-image = ""
+          '';
+        };
+      };
+      defaultSession = "nix-hyprland";
+    };
+    desktopManager = {
+      session = [
+        {
+          name = "nix-hyprland";
+          start = ''
+            ${pkgs.hyprland}/bin/Hyprland $@
+            waitPID=$!
+          '';
+        }
+      ];
+    };
+  };
+}

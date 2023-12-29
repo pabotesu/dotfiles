@@ -2,13 +2,13 @@
   pkgs,
   ...
 }: {
-     programs.regreet.enable = true;
-     services.greeted ={
+     #programs.regreet.enable = true;
+     services.greetd ={
        enable =true;
        settings = {
-         initial_session = {
+         default_session = {
          user = "pabotesu";
-         command = "Hyprland";
+         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu --time --cmd Hyprland";
          };
        };
      };

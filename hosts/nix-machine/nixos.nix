@@ -19,6 +19,7 @@
       ../../modules/xserver.nix
       ../../modules/wm.nix
       ../../modules/dm.nix
+      ../../modules/fcitx5.nix
 
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
