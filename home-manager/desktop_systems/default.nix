@@ -4,6 +4,7 @@
   ./screen_lock
   ./status_bar 
   ./xdg.nix
+  ./gtk.nix
   ];
  
   wayland = {
