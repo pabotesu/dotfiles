@@ -3,6 +3,7 @@
   ./wofi
   ./screen_lock
   ./status_bar 
+  ./xdg.nix
   ];
  
   wayland = {
