@@ -30,6 +30,7 @@ monitor=,preferred,auto,1
 
 exec-once = waybar
 exec-once = fcitx5
+exec-once = mako # notification tool
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf

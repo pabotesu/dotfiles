@@ -1,13 +1,17 @@
-{theme, ...}: let
-  inherit (theme) colors;
+{theme,pkgs, ...}: let
+  inherit (theme) xcolors;
 in {
-  programs.mako = {
+  services.mako = {
     enable = true;
     defaultTimeout = 5000;
     font = "HackGen35 Console NFJ";
     borderRadius = 8;
-    borderSize = 0;
-
-    backgroundColor = colors.bg;
+    borderSize = 2;
+    backgroundColor = xcolors.bg;
+    borderColor = xcolors.fg;
   };
+  home.packages = with pkgs; [
+    libnotify
+  ];
+
 }
