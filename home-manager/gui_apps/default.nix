@@ -3,6 +3,5 @@
     ./terminal
     ./apps
     ./browser
-    ./1password
   ];
 }
