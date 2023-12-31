@@ -100,10 +100,6 @@
     margin-left: 0px;
   }
   
-  label:focus {
-    /*  background-color: #000000;*/
-  }
-  
   #window {
     padding: 0 25px;
   }
@@ -127,20 +123,12 @@
     min-width: 25px;
   }
   
-  #network.disconnected {
-    /*  background-color: #d9989c;*/
-  }
-  
   #pulseaudio {
     padding: 3px;
     margin-right: 3px;
     margin-left: 0px;
     min-width: 25px;
   }
-  
-  #pulseaudio.muted {
-  }
-  
   
   #idle_inhibitor {
     padding: 3px;
