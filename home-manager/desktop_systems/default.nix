@@ -1,4 +1,4 @@
-{pkgs, config, ...}: {
+{inputs, pkgs, config, theme, ...}: {
   imports = [
   ./wofi
   ./screen_lock
@@ -7,7 +7,22 @@
   ./gtk.nix
   ./mako.nix
   ];
- 
+ home.packages = with pkgs; [
+    # Wayland utility
+    wtype
+    wev
+    wayvnc
+
+    swaybg
+    swayidle
+    inputs.hyprland-contrib.packages.x86_64-linux.grimblast
+    inputs.hyprpicker.packages.x86_64-linux.hyprpicker
+    wl-clipboard
+    brightnessctl
+    pamixer
+    playerctl
+  ];
+
   wayland = {
     windowManager.hyprland = {
       enable = true;
