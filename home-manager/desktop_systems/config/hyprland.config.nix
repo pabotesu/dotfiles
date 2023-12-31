@@ -22,7 +22,7 @@ $subMod = SUPER
 # monitor= , 1920x1080@60, 0x0, 1 #
 
 # ---- My Destop Machine Env ---- #
-monitor= DP-1, 2560x1440@60, 0x0, 1
+monitor=,preferred,auto,1
 
 #-----------------------#
 #       exec-tools      #
@@ -152,6 +152,9 @@ bind = $mainMod, Return,  exec, alacritty
 # Full Screen Window
 bind = $mainMod, F, fullscreen
 
+# Floating Window
+bind = $mainMod SHIFT, F, togglefloating
+
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 #bind = $mainMod, Q, exec, alacritty
 bind = $mainMod Shift, Q, killactive, 
@@ -209,4 +212,19 @@ bind = $mainMod, mouse_up, workspace, e-1
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
+
+# Move/resize windows
+bindm = $mainMod, mouse:272, movewindow
+bindm = $mainMod, mouse:273, resizewindow
+
+# Window resize mode
+bind = $mainMod SHIFT, R, submap, resize
+submap = resize
+binde = , right, resizeactive, 10 0
+binde = , left, resizeactive, -10 0
+binde = , up, resizeactive, 0 -10
+binde = , down, resizeactive, 0 10
+bind = , escape, submap, reset
+submap = reset
+
 ''
