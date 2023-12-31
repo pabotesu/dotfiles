@@ -3,5 +3,6 @@
     ./terminal
     ./apps
     ./browser
+    ./discord
   ];
 }
