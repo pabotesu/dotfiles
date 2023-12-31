@@ -12,7 +12,7 @@
     wtype
     wev
     wayvnc
-
+    wob
     swaybg
     swayidle
     inputs.hyprland-contrib.packages.x86_64-linux.grimblast
@@ -21,6 +21,7 @@
     brightnessctl
     pamixer
     playerctl
+    feh
   ];
 
   wayland = {

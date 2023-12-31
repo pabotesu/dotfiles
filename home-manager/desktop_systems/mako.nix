@@ -5,7 +5,7 @@ in {
     enable = true;
     defaultTimeout = 5000;
     font = "HackGen35 Console NFJ";
-    borderRadius = 8;
+    borderRadius = 10;
     borderSize = 2;
     backgroundColor = xcolors.bg;
     borderColor = xcolors.fg;
@@ -14,4 +14,4 @@ in {
     libnotify
   ];
 
-}
+} 

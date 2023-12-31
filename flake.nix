@@ -13,6 +13,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    ### hyprland
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprland-contrib = {
+      url = "github:hyprwm/contrib";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprpicker = {
+      url = "github:hyprwm/hyprpicker";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     ### others systems
     rust-overlay.url = "github:oxalica/rust-overlay";
     xremap.url = "github:xremap/nix-flake";

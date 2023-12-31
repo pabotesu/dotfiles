@@ -13,6 +13,7 @@ OR EDIT THIS ONE ACCORDING TO THE WIKI INSTRUCTIONS.
 
 $mainMod = ALT
 $subMod = SUPER
+$WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
 
 #-----------------------#
 #       monitor         #
@@ -31,6 +32,7 @@ monitor=,preferred,auto,1
 exec-once = waybar
 exec-once = fcitx5
 exec-once = mako # notification tool
+exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
@@ -157,15 +159,20 @@ bind = $mainMod, F, fullscreen
 bind = $mainMod SHIFT, F, togglefloating
 
 # Volume
-bindle = , XF86AudioRaiseVolume, exec, pamixer -i 10
-bindle = , XF86AudioLowerVolume, exec, pamixer -d 10
-bindl = , XF86AudioMute, exec, pamixer -t
+bind = , XF86AudioRaiseVolume, exec, pamixer -i 10 && pamixer --get-volume > $WOBSOCK
+bind = , XF86AudioLowerVolume, exec, pamixer -d 10 && pamixer --get-volume > $WOBSOCK
+bind = , XF86AudioMute, exec, pamixer -t && ( pamixer --get-mute && echo 0 > $WOBSOCK ) || pamixer --get-volume > $WOBSOCK
 
 # Volume Source
-bindle = SHIFT, XF86AudioMute, exec, pamixer --default-source -t
+bind = SHIFT, XF86AudioRaiseVolume, exec, pamixer --default-source -i 10 && pamixer --default-source --get-volume > $WOBSOCK
+bind = SHIFT, XF86AudioLowerVolume, exec, pamixer --default-source -d 10 && pamixer --default-source --get-volume > $WOBSOCK
+bind = SHIFT, XF86AudioMute, exec, pamixer --default-source -t && ( pamixer --default-source --get-mute && echo 0 > $WOBSOCK ) || pamixer --default-source --get-volume > $WOBSOCK
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod SHIFT, Q, killactive, 
+bind = $mainMod SHIFT, Q, killactive
+
+## Screen Shot
+bind = , PRINT, exec, grimblast --notify copy area | wl-paste -t image/png > ~/Pictures/Screenshots/$(date "+%Y%m%d-%H%M%S")'_grim_area.png'
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l
