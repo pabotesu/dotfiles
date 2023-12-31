@@ -5,6 +5,7 @@
   ./status_bar 
   ./xdg.nix
   ./gtk.nix
+  ./mako.nix
   ];
  
   wayland = {

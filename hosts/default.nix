@@ -26,7 +26,13 @@ inputs: let
       };
       extraSpecialArgs = {
         inherit inputs username;
-        #theme = (import ../themes) "tokyonight-moon";
+        theme = (import ../themes) "iceberg";
+        pkgs-stable = import inputs.nixpkgs-stable {
+          inherit system overlays;
+          config = {
+            allowUnfree = true;
+          };
+        };
       };
       modules =
         modules

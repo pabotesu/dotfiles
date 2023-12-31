@@ -11,13 +11,13 @@ in {
           };  
         };
         font = {
-          size = 12;
+          size = 10;
           normal.family = "JetBrainsMono Nerd Font";
         };
         colors = {
           primary = {
             background = xcolors.bg;
-            foreground = xcolors.bg;
+            foreground = xcolors.fg;
           };
           normal = {
             inherit (xcolors) black;

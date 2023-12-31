@@ -12,7 +12,8 @@
 
   programs.noisetorch.enable = true;
   
-  environment.systemPackages = [
-   pkgs.pavucontrol
+  environment.systemPackages = with pkgs; [
+   pavucontrol
+   pamixer
   ];
 }

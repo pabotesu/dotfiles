@@ -155,15 +155,16 @@ bind = $mainMod, F, fullscreen
 # Floating Window
 bind = $mainMod SHIFT, F, togglefloating
 
+# Volume
+bindle = , XF86AudioRaiseVolume, exec, pamixer -i 10
+bindle = , XF86AudioLowerVolume, exec, pamixer -d 10
+bindl = , XF86AudioMute, exec, pamixer -t
+
+# Volume Source
+bindle = SHIFT, XF86AudioMute, exec, pamixer --default-source -t
+
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-#bind = $mainMod, Q, exec, alacritty
-bind = $mainMod Shift, Q, killactive, 
-#bind = $mainMod Shift, Q, exit, 
-#bind = $mainMod, E, exec, dolphin
-#bind = $mainMod, V, togglefloating, 
-#bind = $mainMod, R, exec, wofi --show drun
-#bind = $mainMod, P, pseudo, # dwindle
-#bind = $mainMod, J, togglesplit, # dwindle
+bind = $mainMod SHIFT, Q, killactive, 
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l

@@ -7,5 +7,5 @@ in rec
   # "RRGGBB"
   colors = builtins.mapAttrs (_: value: removeHash value) colors;
   # wezterm colors
-  wezterm = builtins.readFile ./colors/${theme}/wezterm.toml;
+  # wezterm = builtins.readFile ./colors/${theme}/.toml;
 }
