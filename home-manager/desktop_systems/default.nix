@@ -36,8 +36,8 @@
 
   home.file = {
     "screenlock.sh" = {
-     target = "~/.config/hypr/scripts/screenlock.sh";
-     source = ./script/screenlock.sh;
+     target = ".desktop_env/scripts/screenlock.sh";
+     source = ./scripts/screenlock.sh;
     };
   };
 }
