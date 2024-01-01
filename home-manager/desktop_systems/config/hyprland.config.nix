@@ -26,6 +26,11 @@ env = XDG_SESSION_TYPE,wayland
 env = XDG_SESSION_DESKTOP,Hyprland
 env = XDG_CURRENT_DESKTOP,Hyprland
 env = _JAVA_AWT_WM_NONREPARENTING,1
+env = INPUT_METHOD,fcitx
+env = QT_IM_MODULE,fcitx
+env = GTK_IM_MODULE,fcitx
+env = XMODIFIERS=@im,fcitx
+env = XIM_SERVERS,fcitx
 
 #-----------------------#
 #       monitor         #
@@ -45,8 +50,7 @@ exec-once = waybar
 exec-once = fcitx5 -d
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
-exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec-once = ~/.config/hypr/scripts/screenlock.sh
+exec-once = ~/.desktop_env/scripts/screenlock.sh
 exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 

@@ -1,4 +1,4 @@
 swayidle -w \
-timeout 60 'swaylock -f' \
-timeout 120 'hyprctl dispatch dpms off' \
-resume \\'hyprctl dispatch dpms on' &
+timeout 600 'swaylock -f' \
+timeout 1200 'hyprctl dispatch dpms off' \
+resume 'hyprctl dispatch dpms on' &

@@ -34,6 +34,13 @@
     };
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+  };
+
   home.file = {
     "screenlock.sh" = {
      target = ".desktop_env/scripts/screenlock.sh";
