@@ -16,6 +16,18 @@ $subMod = SUPER
 $WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
 
 #-----------------------#
+#      environment      #
+#-----------------------#
+env = QT_QPA_PLATFORM,wayland
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,"1"
+env = GTK_THEME,Adwaita:dark
+env = MOZ_ENABLE_WAYLAND,1
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = _JAVA_AWT_WM_NONREPARENTING,1
+
+#-----------------------#
 #       monitor         #
 #-----------------------#
 
@@ -30,9 +42,13 @@ monitor=,preferred,auto,1
 #-----------------------#
 
 exec-once = waybar
-exec-once = fcitx5
+exec-once = fcitx5 -d
 exec-once = mako # notification tool
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
+exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec-once = ~/.config/hypr/scripts/screenlock.sh
 exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
+
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf

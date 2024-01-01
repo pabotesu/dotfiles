@@ -33,4 +33,11 @@
     extraConfig = import ./config/hyprland.config.nix {}; 
     };
   };
+
+  home.file = {
+    "screenlock.sh" = {
+     target = "~/.config/hypr/scripts/screenlock.sh";
+     source = ./script/screenlock.sh;
+    };
+  };
 }
