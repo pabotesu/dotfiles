@@ -59,6 +59,10 @@
   # enable ssh
   services.openssh.enable = true; 
 
+  # use zsh
+  programs.zsh.enable = true;
+  users.users.pabotesu.shell = pkgs.zsh;
+
   # Did you read the comment?
   system.stateVersion = "23.05";
 }
