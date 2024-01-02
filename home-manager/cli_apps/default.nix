@@ -5,5 +5,8 @@
   ];
   home.packages = with pkgs; [
     neofetch
+    eza
+    ripgrep
+    bat
   ];
 }

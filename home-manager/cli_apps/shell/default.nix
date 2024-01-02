@@ -9,10 +9,10 @@
     shellAliases = {
       cat = "bat";
       grep = "rg";
-      ls = "exa --icons --classify";
-      la = "exa --all --icons --classify";
-      ll = "exa --long --all --git --icons";
-      tree = "exa --icons --classify --tree";
+      ls = "eza --icons --classify";
+      la = "eza --all --icons --classify";
+      ll = "eza --long --all --git --icons";
+      tree = "eza --icons --classify --tree";
     };
   };
 }
