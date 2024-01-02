@@ -53,10 +53,18 @@
     in
       getFrom 
         "https://github.com/ful1e5/XCursor-pro/releases/download/v2.0.1/XCursor-Pro-Dark.tar.gz"
-        "sha256-1sz4lj4awv1qbhxpjndy5cgiggxs2gybbmc5ll3fjz7h486ap7n0"
+        "sha256-wJ6rDCLwfOkGpYXVtfwTur8XHyu+WXk7XDhsroik5Os="
         "XCursor-Pro-Dark";
 
   home.file = {
+    "wallpaper.jpg" = {
+      target = ".desktop_env/scripts/wallpaper.jpg";
+      source = pkgs.fetchurl {
+        url = "https://imgur.com/PhdhH.jpg";
+        sha256 = "sha256-lOFjG06Qq6KzERz3/OQp40oIsBhhgy9s8MBMpbyYTWY=";
+        
+      };
+    };
     "screenlock.sh" = {
      target = ".desktop_env/scripts/screenlock.sh";
      source = ./scripts/screenlock.sh;

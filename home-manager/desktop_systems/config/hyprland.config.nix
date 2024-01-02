@@ -51,6 +51,7 @@ exec-once = fcitx5 -d
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
 exec-once = ~/.desktop_env/scripts/screenlock.sh
+exec-once = swaybg --image ~/.desktop_env/scripts/wallpaper.jpg --mode fill
 exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 
