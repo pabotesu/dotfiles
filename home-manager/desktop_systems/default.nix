@@ -62,7 +62,6 @@
       source = pkgs.fetchurl {
         url = "https://imgur.com/PhdhH.jpg";
         sha256 = "sha256-lOFjG06Qq6KzERz3/OQp40oIsBhhgy9s8MBMpbyYTWY=";
-        
       };
     };
     "screenlock.sh" = {
