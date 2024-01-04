@@ -29,7 +29,8 @@ env = _JAVA_AWT_WM_NONREPARENTING,1
 env = INPUT_METHOD,fcitx
 env = QT_IM_MODULE,fcitx
 env = GTK_IM_MODULE,fcitx
-env = XMODIFIERS=@im,fcitx
+env = XMODIFIERS,@im=fcitx
+env = XMODIFIER,"@im=fcitx"
 env = XIM_SERVERS,fcitx
 
 #-----------------------#
