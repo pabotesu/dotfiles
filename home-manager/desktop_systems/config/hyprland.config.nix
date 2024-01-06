@@ -32,6 +32,7 @@ env = GTK_IM_MODULE,fcitx
 env = XMODIFIERS,@im=fcitx
 env = XMODIFIER,"@im=fcitx"
 env = XIM_SERVERS,fcitx
+env = WAYLAND_SESSION,wayland-1 swaylock
 
 #-----------------------#
 #       monitor         #
