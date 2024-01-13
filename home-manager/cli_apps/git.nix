@@ -17,5 +17,6 @@
     nodePackages.gitmoji-cli
     ghq
     peco
+    hub
   ];
 }
