@@ -19,7 +19,7 @@ $WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
 #      environment      #
 #-----------------------#
 env = QT_QPA_PLATFORM,wayland
-env = QT_WAYLAND_DISABLE_WINDOWDECORATION,"1"
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 env = GTK_THEME,Adwaita:dark
 env = MOZ_ENABLE_WAYLAND,1
 env = XDG_SESSION_TYPE,wayland
@@ -28,9 +28,9 @@ env = XDG_CURRENT_DESKTOP,Hyprland
 env = _JAVA_AWT_WM_NONREPARENTING,1
 env = INPUT_METHOD,fcitx
 env = QT_IM_MODULE,fcitx
-env = GTK_IM_MODULE,fcitx
+env = GTK_IM_MODULE,
 env = XMODIFIERS,@im=fcitx
-env = XMODIFIER,"@im=fcitx"
+env = XMODIFIER,@im=fcitx
 env = XIM_SERVERS,fcitx
 env = WAYLAND_SESSION,wayland-1 swaylock
 

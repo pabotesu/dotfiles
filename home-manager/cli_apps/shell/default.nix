@@ -14,5 +14,19 @@
       ll = "eza --long --all --git --icons";
       tree = "eza --icons --classify --tree";
     };
+    initExtra = 
+      ''
+        # setup peco & ghq
+        function peco-src () {
+          local selected_dir=$(ghq list -p | peco --prompt="repositories >" --query "$LBUFFER")
+          if [ -n "$selected_dir" ]; then
+            BUFFER="cd ${selected_dir}"
+            zle accept-line
+          fi
+          zle clear-screen
+        }
+        zle -N peco-src
+        bindkey '^]' peco-src
+      '';
   };
 }

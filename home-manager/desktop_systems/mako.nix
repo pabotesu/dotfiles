@@ -9,6 +9,8 @@ in {
     borderSize = 2;
     backgroundColor = xcolors.bg;
     borderColor = xcolors.fg;
+    width=400;
+    height=100;
   };
   home.packages = with pkgs; [
     libnotify
