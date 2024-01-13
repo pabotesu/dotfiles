@@ -11,7 +11,7 @@ My Nix Environment
 | Home-Manager | ホストに存在する対象のユーザ上で設定されていてほしい項目やパッケージ・ツール等の定義 |
 | Nix Shell | さまざまな開発環境の定義 |
 
-## Hhosts and Users
+## Hosts and Users
 ホストとユーザーの定義
 | host_name | principal use |
 | ---- | ---- |
