@@ -46,3 +46,4 @@ nix run home-manager -- switch --flake "./#$user_name@$my_hosts_name"
 ```
 
 *My Nix Environment? Why, It's right where I left it !!!*
+![image](https://github.com/pabotesu/dotfiles/assets/35569302/b5da54ee-01ab-4b28-b864-aa86760ca4a9)
