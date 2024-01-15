@@ -61,7 +61,7 @@ exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator t
 # source = ~/.config/hypr/myColors.conf
 
 # Some default env vars.
-env = XCURSOR_SIZE,24
+env = XCURSOR_SIZE,16
 
 # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 input {
