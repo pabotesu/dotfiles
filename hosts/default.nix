@@ -41,7 +41,7 @@ inputs: let
             home = {
               inherit username;
               homeDirectory = "/home/${username}";
-              stateVersion = "22.11";
+              stateVersion = "23.11";
             };					
             programs.home-manager.enable = true;
           }
