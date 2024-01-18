@@ -22,6 +22,7 @@
       ../../modules/fcitx5.nix
       ../../modules/fonts.nix
       ../../modules/sound.nix
+      ../../modules/flatpak.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd

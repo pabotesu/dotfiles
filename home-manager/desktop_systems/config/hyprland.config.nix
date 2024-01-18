@@ -45,6 +45,11 @@ env = WAYLAND_SESSION,wayland-1 swaylock
 monitor=,preferred,auto,1
 
 #-----------------------#
+#       workspace       #
+#-----------------------#
+workspace = 1, monitor:DP-1, default:true, persistent:true
+
+#-----------------------#
 #       exec-tools      #
 #-----------------------#
 
@@ -258,5 +263,7 @@ binde = , up, resizeactive, 0 -10
 binde = , down, resizeactive, 0 10
 bind = , escape, submap, reset
 submap = reset
+
+
 
 ''
