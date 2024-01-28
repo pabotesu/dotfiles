@@ -32,7 +32,6 @@ env = GTK_IM_MODULE,
 env = XMODIFIERS,@im=fcitx
 env = XMODIFIER,@im=fcitx
 env = XIM_SERVERS,fcitx
-env = WAYLAND_SESSION,wayland-1 swaylock
 
 #-----------------------#
 #       monitor         #
@@ -42,7 +41,7 @@ env = WAYLAND_SESSION,wayland-1 swaylock
 # monitor= , 1920x1080@60, 0x0, 1 #
 
 # ---- My Destop Machine Env ---- #
-monitor=,preferred,auto,1
+monitor=DP-1,preferred,auto,1
 
 #-----------------------#
 #       workspace       #

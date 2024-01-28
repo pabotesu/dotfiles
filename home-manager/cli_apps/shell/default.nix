@@ -13,6 +13,7 @@
       la = "eza --all --icons --classify";
       ll = "eza --long --all --git --icons";
       tree = "eza --icons --classify --tree";
+      nix-direnv = "echo 'use flake' >> .envrc && direnv allow";
     };
     initExtra = 
       ''
