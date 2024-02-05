@@ -58,6 +58,8 @@ exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
 exec-once = ~/.desktop_env/scripts/screenlock.sh
 exec-once = swaybg --image ~/.desktop_env/scripts/wallpaper.jpg --mode fill
+exec = clipman restore
+exec = exec wl-paste -t text --watch clipman store
 exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 
@@ -198,8 +200,11 @@ bind = SHIFT, XF86AudioMute, exec, pamixer --default-source -t && ( pamixer --de
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
 bind = $mainMod SHIFT, Q, killactive
 
-## Screen Shot
+# Screen Shot
 bind = , PRINT, exec, grimblast --notify copy area | wl-paste -t image/png > ~/Pictures/Screenshots/$(date "+%Y%m%d-%H%M%S")'_grim_area.png'
+
+# Clipman
+bind = $mainMod SHIFT, P, exec, clipman pick -t wofi
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l

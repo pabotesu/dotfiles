@@ -31,6 +31,11 @@ inputs: let
           inherit system overlays;
           config = {
             allowUnfree = true;
+            
+            # needs install obsidian  
+            permittedInsecurePackages = [
+              "electron-25.9.0"
+            ];
           };
         };
       };

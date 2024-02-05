@@ -22,6 +22,7 @@
     pamixer
     playerctl
     feh
+    clipman
   ];
 
   wayland = {
