@@ -29,23 +29,6 @@ inputs: let
           permittedInsecurePackages = [
             "electron-25.9.0"
           ];
-
-          # sway lock
-          packageOverrides = pkgs:
-          with pkgs;
-          let swaylock-effects_latest = swaylock-effects.overrideDerivation (drv:
-            let version = "1.7.0.0";
-            in {
-              inherit version;
-              name = "swaylock-effects-${version}";
-              src = fetchurl {
-                url = "https://github.com/jirutka/swaylock-effects/archive/refs/tags/v${version}.tar.gz";
-                sha256 = "sha256-VcJm4ej0PpTn7dfJ7QLg2R25sEkhmYAV5LlF+8FRtLI=";
-              };
-            });
-          in {
-            swaylock-effects = swaylock-effects_latest;
-          };
         };
       };
       extraSpecialArgs = {
