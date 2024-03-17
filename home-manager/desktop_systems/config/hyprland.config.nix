@@ -35,12 +35,14 @@ env = XIM_SERVERS,fcitx
 # monitor= , 1920x1080@60, 0x0, 1 #
 
 # ---- My Destop Machine Env ---- #
-monitor=DP-1,preferred,auto,1
+monitor=HDMI-A-1,preferred,auto,1
+monitor=HDMI-A-2,preferred,auto,1
 
 #-----------------------#
 #       workspace       #
 #-----------------------#
-workspace = 1, monitor:DP-1, default:true, persistent:true
+workspace = 1, monitor:HDMI-A-1, default:true, persistent:true
+workspace = 2, monitor:HDMI-A-2, default:true, persistent:true
 
 #-----------------------#
 #       exec-tools      #
@@ -261,7 +263,5 @@ binde = , up, resizeactive, 0 -10
 binde = , down, resizeactive, 0 10
 bind = , escape, submap, reset
 submap = reset
-
-
 
 ''
