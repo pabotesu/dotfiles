@@ -35,8 +35,8 @@ env = XIM_SERVERS,fcitx
 # monitor= , 1920x1080@60, 0x0, 1 #
 
 # ---- My Destop Machine Env ---- #
-monitor=HDMI-A-1,preferred,auto,1
-monitor=HDMI-A-2,preferred,auto,1
+monitor=HDMI-A-1 ,2560x1440@100, auto, 1
+monitor=HDMI-A-2 ,2560x1440@100, auto, 1
 
 #-----------------------#
 #       workspace       #

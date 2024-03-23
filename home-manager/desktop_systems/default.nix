@@ -23,6 +23,7 @@
     playerctl
     feh
     clipman
+    wdisplays
   ];
 
   wayland = {

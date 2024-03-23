@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.waybar-mpris = {
+  programs.waybar = {
     enable = true;
   };
   home.file.".config/waybar/config".source = ./config/waybar.config;
