@@ -2,7 +2,7 @@
   description = " #---# NixOS Configuration for pabotesu #---# ";
 
   inputs = {
-    ### nix ans nix-tools
+    ### nix and nix-tools
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     flake-utils.url = "github:numtide/flake-utils";
