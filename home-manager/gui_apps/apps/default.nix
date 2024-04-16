@@ -13,7 +13,11 @@
     # media player
     gnome.totem # video player
     gnome.evince # pdf viewer
-    inputs.syndicationd.packages.${pkgs.system}.default
+  
+    
+    # file manager
+    xfce.thunar
+
   ];
   ### media control
   services.easyeffects.enable = true;
