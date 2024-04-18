@@ -49,7 +49,7 @@ workspace = 2, monitor:HDMI-A-2, default:true, persistent:true
 #-----------------------#
 
 exec-once = waybar
-exec-once = fcitx5 -d
+exec-once = /run/current-system/sw/bin/fcitx5 -D
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
 exec-once = ~/.desktop_env/scripts/screenlock.sh
