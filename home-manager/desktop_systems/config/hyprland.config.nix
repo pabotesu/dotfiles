@@ -24,8 +24,8 @@ env = INPUT_METHOD,fcitx
 env = QT_IM_MODULE,fcitx
 env = GTK_IM_MODULE,
 env = XMODIFIERS,@im=fcitx
-env = XMODIFIER,@im=fcitx
 env = XIM_SERVERS,fcitx
+env = bitdepth,10
 
 #-----------------------#
 #       monitor         #

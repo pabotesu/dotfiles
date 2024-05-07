@@ -8,5 +8,9 @@
       enable = true;
       commandLineArgs = ["--enable-features=WebUIDarkMode" "--force-dark-mode" "--incognito"];
     };
+    firefox = {
+      enable = true;
+    };
+
   };
 }

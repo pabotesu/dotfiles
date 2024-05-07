@@ -24,6 +24,8 @@
     feh
     clipman
     wdisplays
+    wireplumber
+    slurp
   ];
 
   wayland = {

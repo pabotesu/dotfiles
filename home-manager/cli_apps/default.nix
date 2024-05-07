@@ -9,5 +9,6 @@
     eza
     ripgrep
     bat
+    doggo
   ];
 }

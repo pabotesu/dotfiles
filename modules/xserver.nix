@@ -3,10 +3,11 @@
     enable = true;
     autoRepeatDelay = 300;
     autoRepeatInterval = 30;
-    libinput = {
+  };
+  
+  services.libinput = {
       enable = true;
       mouse.accelProfile = "flat";
-    };
   };
 
   programs.dconf.enable = true;
