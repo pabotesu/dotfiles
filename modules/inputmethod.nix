@@ -1,9 +1,10 @@
 {pkgs, ...}: {
   i18n.inputMethod = {
-    enabled = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      anthy 
-      mozc
+    enabled = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-mozc
+      fcitx5-gtk
+      fcitx5-skk
     ];
   };
 }
