@@ -2,13 +2,13 @@
   pkgs,
   ...
 }: {
-  services.greetd ={
-       enable =true;
-       settings = {
-         default_session = {
-         user = "pabotesu";
-         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --user-menu --time --cmd Hyprland";
-         };
-       };
-     };
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    displayManager.gdm.wayland = true;
+  };
+    
+  services.libinput.enable = true;
+  services.displayManager.sessionPackages = [ pkgs.hyprland ];
+
 }
