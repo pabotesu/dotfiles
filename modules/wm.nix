@@ -8,6 +8,4 @@
     enable = true;
     wlr.enable = true;
   };
-  
-  security.pam.services.swaylock = {};
 }

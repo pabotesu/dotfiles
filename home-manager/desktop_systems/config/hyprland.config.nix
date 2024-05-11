@@ -7,7 +7,7 @@
 
 $mainMod = ALT
 $subMod = SUPER
-$WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
+$WOBSOCK = $XDG_RUNTIME_DIR/wob.sock 
 
 #-----------------------#
 #      environment      #
@@ -54,16 +54,16 @@ exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
 exec-once = ~/.desktop_env/scripts/screenlock.sh
 exec-once = swaybg --image ~/.desktop_env/scripts/wallpaper.jpg --mode fill
-exec = clipman restore
-exec = exec wl-paste -t text --watch clipman store
-exec = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
+exec-once = clipman restore
+exec-once = exec wl-paste -t text --watch clipman store
+exec-once = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 
 # Source a file (multi-file configs)
 # source = ~/.config/hypr/myColors.conf
 
 # Some default env vars.
-env = XCURSOR_SIZE,16
+env = XCURSOR_SIZE,14
 
 # For all categories, see https://wiki.hyprland.org/Configuring/Variables/
 input {
@@ -171,8 +171,8 @@ device:epic-mouse-v1 {
 bind = $mainMod SHIFT, L, exec, swaylock -f
 
 # Start Launcher
-bind = $mainMod, D, exec, wofi --show drun
-bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
+bind = $mainMod, D, exec, wofi --show drun -I
+bind = $mainMod SHIFT, E, exec, wlogout -b 4
 
 # Start Terminal
 bind = $mainMod, Return,  exec, alacritty

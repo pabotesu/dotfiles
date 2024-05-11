@@ -18,6 +18,9 @@
     # file manager
     xfce.thunar
 
+    # default terminal
+    kitty
+
   ];
   ### media control
   services.easyeffects.enable = true;
