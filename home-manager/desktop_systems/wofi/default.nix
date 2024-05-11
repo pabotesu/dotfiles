@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [wofi wofi-emoji];
+home.packages = with pkgs; [wofi wofi-emoji];
 
 ## app launcher
 home.file.".config/wofi/config".source = ./config/wofi.config;

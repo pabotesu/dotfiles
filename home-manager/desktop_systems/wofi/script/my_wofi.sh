@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 pkill wofi || {
-  wofi --style=${HOME}/.config/wofi/style.css --show=drun -I
+  wofi --style=${HOME}/.config/wofi/style.css -I
 }

@@ -22,6 +22,7 @@
       ../../modules/fonts.nix
       ../../modules/sound.nix
       ../../modules/inputmethod.nix
+      ../../modules/security.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd

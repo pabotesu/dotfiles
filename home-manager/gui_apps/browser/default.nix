@@ -6,7 +6,7 @@
         "--enable-wayland-ime"
         "--enable-features=WebUIDarkMode"
         "--force-dark-mode"
-        ];
+      ];
     };
     brave = {
       enable = true;
@@ -15,7 +15,7 @@
         "--enable-features=WebUIDarkMode"
         "--force-dark-mode" 
         "--incognito"
-        ];
+      ];
     };
     firefox = {
       enable = true;

@@ -3,12 +3,12 @@
   ...
 }: {
   services.xserver = {
-    enable = true;
     displayManager.gdm.enable = true;
     displayManager.gdm.wayland = true;
   };
-    
-  services.libinput.enable = true;
+  programs.dconf.enable = true;
+
   services.displayManager.sessionPackages = [ pkgs.hyprland ];
+  services.dbus.enable = true; 
 
 }
