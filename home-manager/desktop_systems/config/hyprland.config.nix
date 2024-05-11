@@ -171,7 +171,7 @@ device:epic-mouse-v1 {
 bind = $mainMod SHIFT, L, exec, swaylock -f
 
 # Start Launcher
-bind = $mainMod, D, exec, ~/.rsc_dir/my_wofi.sh
+bind = $mainMod, D, exec, wofi --show drun
 bind = $mainMod SHIFT, E, exec, ~/.rsc_dir/powermenu.sh
 
 # Start Terminal

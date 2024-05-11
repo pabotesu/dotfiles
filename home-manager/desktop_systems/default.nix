@@ -1,6 +1,6 @@
 {inputs, pkgs, config, theme, ...}: {
   imports = [
-  ./wofi
+  ./launcher
   ./screen_lock
   ./status_bar 
   ./xdg.nix
