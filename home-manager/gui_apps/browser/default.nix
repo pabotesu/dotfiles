@@ -4,6 +4,8 @@
       enable = true;
       commandLineArgs = [
         "--enable-wayland-ime"
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
         "--enable-features=WebUIDarkMode"
         "--force-dark-mode"
       ];
@@ -12,6 +14,8 @@
       enable = true;
       commandLineArgs = [
         "--enable-wayland-ime"
+        "--enable-features=UseOzonePlatform"
+        "--ozone-platform=wayland"
         "--enable-features=WebUIDarkMode"
         "--force-dark-mode" 
         "--incognito"

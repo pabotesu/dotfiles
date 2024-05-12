@@ -14,7 +14,6 @@ $WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
 #-----------------------#
 env = QT_QPA_PLATFORM,wayland
 env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
-env = GTK_THEME,Adwaita:dark
 env = MOZ_ENABLE_WAYLAND,1
 env = XDG_SESSION_TYPE,wayland
 env = XDG_SESSION_DESKTOP,Hyprland
@@ -25,6 +24,7 @@ env = QT_IM_MODULE,fcitx
 env = GTK_IM_MODULE,fcitx
 env = XMODIFIERS,@im=fcitx
 env = XIM_SERVERS,fcitx
+env = GLFW_IM_MODULE,ibus
 env = bitdepth,10
 
 #-----------------------#
@@ -48,8 +48,8 @@ workspace = 2, monitor:HDMI-A-2, default:true, persistent:true
 #       exec-tools      #
 #-----------------------#
 
-exec-once = waybar
-exec-once = /run/current-system/sw/bin/fcitx5 -D
+exec-once = /home/pabotesu/.nix-profile/bin/waybar
+exec-once = fcitx5 -D
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
 exec-once = ~/.desktop_env/scripts/screenlock.sh

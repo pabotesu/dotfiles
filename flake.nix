@@ -26,6 +26,7 @@
       url = "github:hyprwm/hyprpicker";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprsome.url = "github:sopa0/hyprsome";
 
     ### others systems
     rust-overlay.url = "github:oxalica/rust-overlay";

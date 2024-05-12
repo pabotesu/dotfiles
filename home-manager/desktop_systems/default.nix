@@ -26,39 +26,19 @@
     wdisplays
     wireplumber
     slurp
-  ];
+  ]    
+  ++ [
+      inputs.hyprsome.packages.${pkgs.system}.default # workspace manager
+    ];
+
 
   wayland = {
     windowManager.hyprland = {
       enable = true;
-      xwayland = {
-        enable = true;
-      };
-    extraConfig = import ./config/hyprland.config.nix {}; 
+      extraConfig = import ./config/hyprland.config.nix {}; 
     };
   };
 
-  home.pointerCursor = 
-    let 
-      getFrom = url: hash: name: {
-          gtk.enable = true;
-          x11.enable = true;
-          name = name;
-          size = 16;
-          package = 
-            pkgs.runCommand "moveUp" {} ''
-              mkdir -p $out/share/icons
-              ln -s ${pkgs.fetchzip {
-                url = url;
-                hash = hash;
-              }} $out/share/icons/${name}
-          '';
-        };
-    in
-      getFrom 
-        "https://github.com/ful1e5/XCursor-pro/releases/download/v2.0.1/XCursor-Pro-Dark.tar.gz"
-        "sha256-wJ6rDCLwfOkGpYXVtfwTur8XHyu+WXk7XDhsroik5Os="
-        "XCursor-Pro-Dark";
 
   home.file = {
     "wallpaper.jpg" = {
