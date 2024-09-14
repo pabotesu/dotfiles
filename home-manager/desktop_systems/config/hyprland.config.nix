@@ -7,7 +7,7 @@
 
 $mainMod = ALT
 $subMod = SUPER
-$WOBSOCK = $XDG_RUNTIME_DIR/wob.sock 
+$WOBSOCK = $XDG_RUNTIME_DIR/wob.sock
 
 #-----------------------#
 #      environment      #
@@ -21,7 +21,7 @@ env = XDG_CURRENT_DESKTOP,Hyprland
 env = _JAVA_AWT_WM_NONREPARENTING,1
 env = INPUT_METHOD,fcitx
 env = QT_IM_MODULE,fcitx
-env = GTK_IM_MODULE,fcitx
+env = GTK_IM_MODULE,
 env = XMODIFIERS,@im=fcitx
 env = XIM_SERVERS,fcitx
 env = GLFW_IM_MODULE,ibus
@@ -52,7 +52,7 @@ exec-once = /home/pabotesu/.nix-profile/bin/waybar
 exec-once = fcitx5 -D
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
-exec-once = ~/.desktop_env/scripts/screenlock.sh
+exec-once = hypridle
 exec-once = swaybg --image ~/.desktop_env/scripts/wallpaper.jpg --mode fill
 exec-once = clipman restore
 exec-once = exec wl-paste -t text --watch clipman store
@@ -168,7 +168,7 @@ device:epic-mouse-v1 {
 #-----------------------#
 
 # Screenlock
-bind = $mainMod SHIFT, L, exec, swaylock -f
+bind = $mainMod SHIFT, L, exec, hyprlock
 
 # Start Launcher
 bind = $mainMod, D, exec, wofi --show drun -I

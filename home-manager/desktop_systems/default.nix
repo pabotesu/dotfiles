@@ -32,14 +32,6 @@
     ];
 
 
-  wayland = {
-    windowManager.hyprland = {
-      enable = true;
-      extraConfig = import ./config/hyprland.config.nix {}; 
-    };
-  };
-
-
   home.file = {
     "wallpaper.jpg" = {
       target = ".desktop_env/scripts/wallpaper.jpg";
@@ -53,4 +45,12 @@
      source = ./scripts/screenlock.sh;
     };
   };
+
+  wayland = {
+    windowManager.hyprland = {
+      enable = true;
+      extraConfig = import ./config/hyprland.config.nix {};
+    };
+  };
+
 }
