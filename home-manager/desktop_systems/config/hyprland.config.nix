@@ -48,7 +48,7 @@ workspace = 2, monitor:HDMI-A-2, default:true, persistent:true
 #       exec-tools      #
 #-----------------------#
 
-exec-once = /home/pabotesu/.nix-profile/bin/waybar
+exec = /home/pabotesu/.nix-profile/bin/waybar
 exec-once = fcitx5 -D
 exec-once = mako # notification tool
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wayland
