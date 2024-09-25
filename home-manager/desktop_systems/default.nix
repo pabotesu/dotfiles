@@ -26,6 +26,9 @@
     wdisplays
     wireplumber
     slurp
+    xwaylandvideobridge
+    copyq
+    cliphist 
   ]    
   ++ [
       inputs.hyprsome.packages.${pkgs.system}.default # workspace manager

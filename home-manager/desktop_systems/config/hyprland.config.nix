@@ -56,6 +56,9 @@ exec-once = hypridle
 exec-once = swaybg --image ~/.desktop_env/scripts/wallpaper.jpg --mode fill
 exec-once = clipman restore
 exec-once = exec wl-paste -t text --watch clipman store
+exec-once = copyq --start-server
+exec-once = wl-paste --type text --watch cliphist store # Stores only text data
+exec-once = wl-paste --type image --watch cliphist store # Stores only image data
 exec-once = rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob # indicator tool
 
 
@@ -137,7 +140,7 @@ dwindle {
 
 master {
     # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-    new_is_master = true
+    new_on_active = true
 }
 
 gestures {
@@ -200,7 +203,8 @@ bind = $mainMod SHIFT, Q, killactive
 bind = , PRINT, exec, grimblast --notify copy area | wl-paste -t image/png > ~/Pictures/Screenshots/$(date "+%Y%m%d-%H%M%S")'_grim_area.png'
 
 # Clipman
-bind = $mainMod SHIFT, P, exec, clipman pick -t wofi
+#bind = $mainMod SHIFT, P, exec, clipman pick -t wofi
+bind = $mainMod SHIFT, P, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, left, movefocus, l

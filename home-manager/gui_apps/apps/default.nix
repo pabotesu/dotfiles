@@ -1,5 +1,6 @@
 {inputs, pkgs, ...}: {
   home.packages = with pkgs; [
+    
     # editor
     vscode
 
@@ -11,8 +12,8 @@
     _1password-gui
 
     # media player
-    gnome.totem # video player
-    gnome.evince # pdf viewer
+    totem # video player
+    evince # pdf viewer
   
     
     # file manager

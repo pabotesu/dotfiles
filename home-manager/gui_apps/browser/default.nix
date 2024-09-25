@@ -24,6 +24,5 @@
     firefox = {
       enable = true;
     };
-
   };
 }
